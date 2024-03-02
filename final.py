@@ -166,8 +166,11 @@ for judet in judete:
             i += 1
         foundElev(judet, cls, currentString)
 
-
+# sort elevi by punctaj
+elevi = sorted(elevi, key=lambda elev: elev["punctaj"], reverse=True)
 # names
+
+
 def getName(id):
     import requests
     url = "https://api.cyber-edu.co/v1/user/" + id
@@ -226,12 +229,16 @@ for judet in judete:
         "XI": [],
         "XII": []
     }
+    totiElevii = []
     for elev in elevi:
+        totiElevii.append(elev)
         if (elev["judet"] == judet):
             if (elev["clasa"] in claseJud):
                 claseJud[elev["clasa"]].append(elev)
             else:
                 print("Elevul " + elev["id"] + " nu are clasa.")
+    with open(f"./data/{judet}.json", "w") as f:
+        json.dump(totiElevii, f)
     for clasa in claseJud:
         with open(f"./data/{judet}_{clasa}.json", "w") as f:
             json.dump(claseJud[clasa], f)
