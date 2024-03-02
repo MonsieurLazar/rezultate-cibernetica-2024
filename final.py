@@ -1,3 +1,5 @@
+import json
+import os
 from PyPDF2 import PdfReader, PdfWriter
 
 
@@ -13,42 +15,44 @@ for i in range(number_of_pages):
     text = page.extract_text()
     judetIndex = text.find("Județul")
     isMunicipiu = False
-    if(judetIndex == -1):
+    if judetIndex == -1:
         judetIndex = text.find("Municipiul")
-        if(judetIndex != -1):
+        if judetIndex != -1:
             isMunicipiu = True
 
-    if(judetIndex != -1):
-        if writer is not None:
+    if judetIndex != -1:
+        judetName = text[judetIndex+8:text.find("\n", judetIndex)]
+        judetName = judetName.replace(" ", "")
+        if isMunicipiu:
+            judetName = text[judetIndex+11:text.find("\n", judetIndex)]
+        if judetName != "":
+            judete.append(judetName)
+            writer = PdfWriter()
+            writer.add_page(page)
             with open(f"./data/{judetName}.pdf", "wb") as output_pdf:
                 writer.write(output_pdf)
-                
-        judetName = text[judetIndex+8:judetIndex+8+text[judetIndex+8:].find(" ")]
-        if(isMunicipiu):
-            judetName = text[judetIndex+11:judetIndex+11+text[judetIndex+11:].find(" ")]
-        if(judetName != ""):
-            judete.append(judetName)
-           
-        
-        writer = PdfWriter()
-        
-    if writer is not None:
-        writer.add_page(page)
+        else:
+            if writer is not None:
+                writer.add_page(page)
+                with open(f"./data/{judetName}.pdf", "wb") as output_pdf:
+                    writer.write(output_pdf)
 
-if writer is not None:
-    with open(f"./data/{judetName}.pdf", "wb") as output_pdf:
-        writer.write(output_pdf)
-
-import os
-os.remove("data/.pdf")
+    else:
+        if writer is not None:
+            writer.add_page(page)
+            with open(f"./data/{judetName}.pdf", "wb") as output_pdf:
+                writer.write(output_pdf)
 
 print(judete)
 elevi = []
+
+
 def getText(reader, pageNumber):
     page = reader.pages[pageNumber]
     text = page.extract_text()
-    if(pageNumber == 0):
-        cybereduIndexes = [i for i in range(len(text)) if text.startswith("CyberEDU", i)][1]
+    if (pageNumber == 0):
+        cybereduIndexes = [i for i in range(
+            len(text)) if text.startswith("CyberEDU", i)][1]
         workingText = text[cybereduIndexes+8:]
         return workingText
     firstIndex = text.find("/")
@@ -56,13 +60,15 @@ def getText(reader, pageNumber):
     workingText = text[firstIndex+5:]
     return workingText
 
+
 for judet in judete:
     reader = PdfReader(f"./data/{judet}.pdf")
     number_of_pages = len(reader.pages)
     print("Opened " + judet + ".pdf with " + str(number_of_pages) + " pages.")
     for i in range(number_of_pages):
         page = reader.pages[i]
-        print("Opened page " + str(i) + " from " + judet + ".pdf. Extracting text...")
+        print("Opened page " + str(i) + " from " +
+              judet + ".pdf. Extracting text...")
         workingText = getText(reader, i)
 
         separatorChars = ['IX', 'X', 'XI', 'XII']
@@ -80,22 +86,26 @@ for judet in judete:
                 "punctaj": "",
                 "absent": False
             }
-            if(cls == "Unknown"): return
+            if (cls == "Unknown"):
+                return
             print("Clasa " + str(cls))
             isAbsent = currentString.find("absent") != -1
             currentElev["absent"] = isAbsent
-            if(isAbsent):
+            if (isAbsent):
                 print("Elev absent")
                 return
             separatedString = currentString.split(" ")
             separatedString = list(filter(lambda a: a != '', separatedString))
-            separatedString = list(filter(lambda a: a != '\nX', separatedString))
-            if(len(separatedString) < 8):
-                print("Elevul " + separatedString[1] + " are " + str(len(separatedString)) + " elemente.")
+            separatedString = list(
+                filter(lambda a: a != '\nX', separatedString))
+            if (len(separatedString) < 8):
+                print(
+                    "Elevul " + separatedString[1] + " are " + str(len(separatedString)) + " elemente.")
                 print(separatedString)
                 return
             rank = separatedString[0]
-            id = separatedString[1].replace("\n", "") + separatedString[2].replace("\n", "")
+            id = separatedString[1].replace(
+                "\n", "") + separatedString[2].replace("\n", "")
             punctaj = separatedString[3]
             currentElev["rank"] = rank
             currentElev["id"] = id
@@ -139,10 +149,9 @@ for judet in judete:
                 pass
             i += 1
         foundElev(judet, cls, currentString)
-    
-    
+
+
 # write the elevi to a file
-import json
 with open("./output/elevi.json", "w") as f:
     json.dump(elevi, f)
 
@@ -154,7 +163,7 @@ clase = {
     "XII": []
 }
 for elev in elevi:
-    if(elev["clasa"] in clase):
+    if (elev["clasa"] in clase):
         clase[elev["clasa"]].append(elev)
     else:
         print("Elevul " + elev["id"] + " nu are clasa.")
@@ -164,9 +173,12 @@ for clasa in clase:
     with open(f"./output/{clasa}.json", "w") as f:
         json.dump(clase[clasa], f)
     clasaData = clase[clasa]
-    clasaData = list(filter(lambda elev: float(elev["punctaj"]) >= 40.0, clasaData))
-    clasaData = sorted(clasaData, key=lambda elev: elev["punctaj"], reverse=True)
+    clasaData = list(filter(lambda elev: float(
+        elev["punctaj"]) >= 40.0, clasaData))
+    clasaData = sorted(
+        clasaData, key=lambda elev: elev["punctaj"], reverse=True)
     number_of_elevi = len(clasaData)
-    print(f"Clasa {clasa} has {number_of_elevi} students.")
+    print(f"Clasa {clasa} has {
+          number_of_elevi} / {len(clase[clasa])} students.")
     with open(f"./output/{clasa}_40.json", "w") as f:
         json.dump(clasaData, f)
