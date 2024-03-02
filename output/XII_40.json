@@ -1,1 +1,202 @@
-[{"clasa": "XII", "judet": "Bucure\u0219ti", "rank": "1", "id": "7bc9a940-7eae-11ec-97dd-0308bfceac3c", "punctaj": "94.6259", "absent": false}, {"clasa": "XII", "judet": "Gala\u021bi", "rank": "1", "id": "9b633996-c4c6-4031-aac8-619455ecd100", "punctaj": "67.3883", "absent": false}, {"clasa": "XII", "judet": "Bucure\u0219ti", "rank": "2", "id": "6a673950-0e1e-11eb-a29f-1b24c71ca8db", "punctaj": "64.4507", "absent": false}, {"clasa": "XII", "judet": "Bucure\u0219ti", "rank": "3", "id": "98a20583-bf09-4751-8d03-be676cdb88a7", "punctaj": "63.6377", "absent": false}, {"clasa": "XII", "judet": "D\u00e2mbovi\u021ba", "rank": "1", "id": "4ec1ada0-3a51-11eb-bd23-8509c60d2b85", "punctaj": "60.9586", "absent": false}, {"clasa": "XII", "judet": "Bucure\u0219ti", "rank": "4", "id": "9b61c35a-771e-4dc3-a59e-4b02e489f3dc", "punctaj": "60.5874", "absent": false}, {"clasa": "XII", "judet": "Prahova", "rank": "1", "id": "9b604cfd-e4df-4253-806c-77ebd74c172a", "punctaj": "59.6303", "absent": false}, {"clasa": "XII", "judet": "D\u00e2mbovi\u021ba", "rank": "2", "id": "6b29b280-2e46-11eb-8287-67762830fb6d", "punctaj": "59.2152", "absent": false}, {"clasa": "XII", "judet": "Sibiu", "rank": "1", "id": "9b6637b4-fb07-4cca-b207-04a66d47cc64", "punctaj": "54.1775", "absent": false}, {"clasa": "XII", "judet": "Olt", "rank": "1", "id": "9b6f3cd1-9e62-4865-9184-4f37eacb53ea", "punctaj": "53.0972", "absent": false}, {"clasa": "XII", "judet": "Buz\u0103u", "rank": "1", "id": "9b6d6123-5e1b-4fb1-9449-5e4d4fc5a5b6", "punctaj": "51.4276", "absent": false}, {"clasa": "XII", "judet": "Cluj", "rank": "1", "id": "9b5307f7-a56e-4254-b0f9-aa8b9cb864f1", "punctaj": "51.1925", "absent": false}, {"clasa": "XII", "judet": "Bucure\u0219ti", "rank": "5", "id": "9b61fc72-6f3b-40a5-9fdd-58d72d4f2fec", "punctaj": "50.1578", "absent": false}, {"clasa": "XII", "judet": "Boto\u0219ani", "rank": "1", "id": "58f3d390-041c-11eb-8d36-6d9416157f75", "punctaj": "49.2054", "absent": false}, {"clasa": "XII", "judet": "Ilfov", "rank": "1", "id": "9b71b98d-8374-49b1-966c-a8d71dd450ce", "punctaj": "49.133", "absent": false}, {"clasa": "XII", "judet": "Ilfov", "rank": "2", "id": "969f1a20-b3e5-11ec-8f09-cd7dcdfe5221", "punctaj": "48.8156", "absent": false}, {"clasa": "XII", "judet": "Prahova", "rank": "descalificat", "id": "9b5fddf0-4729-4719-87ba-5bc24db2d012", "punctaj": "48.048", "absent": false}, {"clasa": "XII", "judet": "Cluj", "rank": "2", "id": "1bc74410-0e2b-11eb-ac37-0b0aee81bdf1", "punctaj": "47.3713", "absent": false}, {"clasa": "XII", "judet": "Bucure\u0219ti", "rank": "6", "id": "9b62263b-f292-4061-a8dd-0709158ab4ee", "punctaj": "47.1597", "absent": false}, {"clasa": "XII", "judet": "D\u00e2mbovi\u021ba", "rank": "3", "id": "9b5c13fc-7f24-44ae-8548-ca10e1245aa8", "punctaj": "45.6532", "absent": false}, {"clasa": "XII", "judet": "Alba", "rank": "1", "id": "9b61cfcd-e6b6-4dba-8459-759a5d636fe8", "punctaj": "45.5474", "absent": false}, {"clasa": "XII", "judet": "D\u00e2mbovi\u021ba", "rank": "4", "id": "9b5850ce-8f8a-4423-a478-7dc07c3849c9", "punctaj": "44.2776", "absent": false}, {"clasa": "XII", "judet": "Cluj", "rank": "3", "id": "999302af-b2a9-47ed-a8be-0d39c25e18e4", "punctaj": "42.7583", "absent": false}, {"clasa": "XII", "judet": "D\u00e2mbovi\u021ba", "rank": "5", "id": "98d745ba-256f-4bc0-a1fc-18a084bd8ccb", "punctaj": "40.8716", "absent": false}, {"clasa": "XII", "judet": "Constan\u021ba", "rank": "1", "id": "9b5814e9-7660-49bd-b7e4-9815349468f7", "punctaj": "40.4", "absent": false}]
+[
+  {
+    "clasa": "XII",
+    "judet": "Bucure\u0219ti",
+    "rank": "1",
+    "id": "7bc9a940-7eae-11ec-97dd-0308bfceac3c",
+    "punctaj": "94.6259",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Gala\u021bi",
+    "rank": "1",
+    "id": "9b633996-c4c6-4031-aac8-619455ecd100",
+    "punctaj": "67.3883",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Bucure\u0219ti",
+    "rank": "2",
+    "id": "6a673950-0e1e-11eb-a29f-1b24c71ca8db",
+    "punctaj": "64.4507",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Bucure\u0219ti",
+    "rank": "3",
+    "id": "98a20583-bf09-4751-8d03-be676cdb88a7",
+    "punctaj": "63.6377",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "D\u00e2mbovi\u021ba",
+    "rank": "1",
+    "id": "4ec1ada0-3a51-11eb-bd23-8509c60d2b85",
+    "punctaj": "60.9586",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Bucure\u0219ti",
+    "rank": "4",
+    "id": "9b61c35a-771e-4dc3-a59e-4b02e489f3dc",
+    "punctaj": "60.5874",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Prahova",
+    "rank": "1",
+    "id": "9b604cfd-e4df-4253-806c-77ebd74c172a",
+    "punctaj": "59.6303",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "D\u00e2mbovi\u021ba",
+    "rank": "2",
+    "id": "6b29b280-2e46-11eb-8287-67762830fb6d",
+    "punctaj": "59.2152",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Sibiu",
+    "rank": "1",
+    "id": "9b6637b4-fb07-4cca-b207-04a66d47cc64",
+    "punctaj": "54.1775",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Olt",
+    "rank": "1",
+    "id": "9b6f3cd1-9e62-4865-9184-4f37eacb53ea",
+    "punctaj": "53.0972",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Buz\u0103u",
+    "rank": "1",
+    "id": "9b6d6123-5e1b-4fb1-9449-5e4d4fc5a5b6",
+    "punctaj": "51.4276",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Cluj",
+    "rank": "1",
+    "id": "9b5307f7-a56e-4254-b0f9-aa8b9cb864f1",
+    "punctaj": "51.1925",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Bucure\u0219ti",
+    "rank": "5",
+    "id": "9b61fc72-6f3b-40a5-9fdd-58d72d4f2fec",
+    "punctaj": "50.1578",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Boto\u0219ani",
+    "rank": "1",
+    "id": "58f3d390-041c-11eb-8d36-6d9416157f75",
+    "punctaj": "49.2054",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Ilfov",
+    "rank": "1",
+    "id": "9b71b98d-8374-49b1-966c-a8d71dd450ce",
+    "punctaj": "49.133",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Ilfov",
+    "rank": "2",
+    "id": "969f1a20-b3e5-11ec-8f09-cd7dcdfe5221",
+    "punctaj": "48.8156",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Prahova",
+    "rank": "descalificat",
+    "id": "9b5fddf0-4729-4719-87ba-5bc24db2d012",
+    "punctaj": "48.048",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Cluj",
+    "rank": "2",
+    "id": "1bc74410-0e2b-11eb-ac37-0b0aee81bdf1",
+    "punctaj": "47.3713",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Bucure\u0219ti",
+    "rank": "6",
+    "id": "9b62263b-f292-4061-a8dd-0709158ab4ee",
+    "punctaj": "47.1597",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "D\u00e2mbovi\u021ba",
+    "rank": "3",
+    "id": "9b5c13fc-7f24-44ae-8548-ca10e1245aa8",
+    "punctaj": "45.6532",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Alba",
+    "rank": "1",
+    "id": "9b61cfcd-e6b6-4dba-8459-759a5d636fe8",
+    "punctaj": "45.5474",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "D\u00e2mbovi\u021ba",
+    "rank": "4",
+    "id": "9b5850ce-8f8a-4423-a478-7dc07c3849c9",
+    "punctaj": "44.2776",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Cluj",
+    "rank": "3",
+    "id": "999302af-b2a9-47ed-a8be-0d39c25e18e4",
+    "punctaj": "42.7583",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "D\u00e2mbovi\u021ba",
+    "rank": "5",
+    "id": "98d745ba-256f-4bc0-a1fc-18a084bd8ccb",
+    "punctaj": "40.8716",
+    "absent": false
+  },
+  {
+    "clasa": "XII",
+    "judet": "Constan\u021ba",
+    "rank": "1",
+    "id": "9b5814e9-7660-49bd-b7e4-9815349468f7",
+    "punctaj": "40.4",
+    "absent": false
+  }
+]

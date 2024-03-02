@@ -1,1 +1,170 @@
-[{"clasa": "X", "judet": "Constan\u021ba", "rank": "1", "id": "9a225f1b-f0d4-4e26-8cbd-6a0137e27225", "punctaj": "62.5642", "absent": false}, {"clasa": "X", "judet": "Gala\u021bi", "rank": "1", "id": "017435a0-419f-11ec-8e8b-4f0670a0ad15", "punctaj": "61.4002", "absent": false}, {"clasa": "X", "judet": "S\u0103laj", "rank": "1", "id": "9b6db8bf-d163-4704-aa73-1d689cabc284", "punctaj": "55.3906", "absent": false}, {"clasa": "X", "judet": "Buz\u0103u", "rank": "1", "id": "9b4bd9b3-d9eb-4202-803e-094d40e85753", "punctaj": "51.8662", "absent": false}, {"clasa": "X", "judet": "Bucure\u0219ti", "rank": "2", "id": "991fe248-4b0f-4013-84a9-8336f95bd400", "punctaj": "51.5669", "absent": false}, {"clasa": "X", "judet": "Gorj", "rank": "1", "id": "9b51114e-035d-47aa-a9c5-5fcf12e92058", "punctaj": "51.0563", "absent": false}, {"clasa": "X", "judet": "Arge\u0219", "rank": "1", "id": "9b4fd4b8-b3e0-464d-b720-ee08353570ee", "punctaj": "50.9349", "absent": false}, {"clasa": "X", "judet": "Arge\u0219", "rank": "2", "id": "9b575b8f-24ee-44dc-be35-cdef215c1947", "punctaj": "50.4752", "absent": false}, {"clasa": "X", "judet": "Suceava", "rank": "1", "id": "9b459405-8c12-478b-b1af-343941634280", "punctaj": "50.3337", "absent": false}, {"clasa": "X", "judet": "Prahova", "rank": "1", "id": "9b5fa391-b292-413a-a774-b7a1d1466de4", "punctaj": "48.9246", "absent": false}, {"clasa": "X", "judet": "Olt", "rank": "1", "id": "9b6f6893-7996-4588-b0aa-449d462746f9", "punctaj": "48.5734", "absent": false}, {"clasa": "X", "judet": "Buz\u0103u", "rank": "2", "id": "9b561df3-a878-423a-85a9-aed3dc9141be", "punctaj": "47.5207", "absent": false}, {"clasa": "X", "judet": "Buz\u0103u", "rank": "3", "id": "9b4bd7db-ecf8-4bb6-895b-025df93b1afe", "punctaj": "46.78", "absent": false}, {"clasa": "X", "judet": "Bucure\u0219ti", "rank": "3", "id": "b1b58fc0-042b-11ec-96af-a70293ff71e4", "punctaj": "44.3477", "absent": false}, {"clasa": "X", "judet": "Ialomi\u021ba", "rank": "1", "id": "9b454cb6-8542-438d-92bb-70f3f81859fc", "punctaj": "44.2541", "absent": false}, {"clasa": "X", "judet": "Buz\u0103u", "rank": "4", "id": "9b4bc336-58f0-422a-9a22-9b6f4694d2cb", "punctaj": "43.4991", "absent": false}, {"clasa": "X", "judet": "Bac\u0103u", "rank": "1", "id": "9b55f2fd-37ca-40d8-b102-6bd9622baa04", "punctaj": "41.4885", "absent": false}, {"clasa": "X", "judet": "Suceava", "rank": "2", "id": "99022c53-2223-4786-8d3d-97270337885c", "punctaj": "41.4885", "absent": false}, {"clasa": "X", "judet": "Arge\u0219", "rank": "3", "id": "9b540611-6607-475c-80e7-44d959536405", "punctaj": "40.5361", "absent": false}, {"clasa": "X", "judet": "Buz\u0103u", "rank": "5", "id": "9b4bdd04-b79b-4942-b226-0abb8a85bfa8", "punctaj": "40.4235", "absent": false}, {"clasa": "X", "judet": "Bucure\u0219ti", "rank": "1", "id": "5532fae0-04e8-11ed-8ba9-fb85fcf3e2a6", "punctaj": "100", "absent": false}]
+[
+  {
+    "clasa": "X",
+    "judet": "Constan\u021ba",
+    "rank": "1",
+    "id": "9a225f1b-f0d4-4e26-8cbd-6a0137e27225",
+    "punctaj": "62.5642",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Gala\u021bi",
+    "rank": "1",
+    "id": "017435a0-419f-11ec-8e8b-4f0670a0ad15",
+    "punctaj": "61.4002",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "S\u0103laj",
+    "rank": "1",
+    "id": "9b6db8bf-d163-4704-aa73-1d689cabc284",
+    "punctaj": "55.3906",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Buz\u0103u",
+    "rank": "1",
+    "id": "9b4bd9b3-d9eb-4202-803e-094d40e85753",
+    "punctaj": "51.8662",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Bucure\u0219ti",
+    "rank": "2",
+    "id": "991fe248-4b0f-4013-84a9-8336f95bd400",
+    "punctaj": "51.5669",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Gorj",
+    "rank": "1",
+    "id": "9b51114e-035d-47aa-a9c5-5fcf12e92058",
+    "punctaj": "51.0563",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Arge\u0219",
+    "rank": "1",
+    "id": "9b4fd4b8-b3e0-464d-b720-ee08353570ee",
+    "punctaj": "50.9349",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Arge\u0219",
+    "rank": "2",
+    "id": "9b575b8f-24ee-44dc-be35-cdef215c1947",
+    "punctaj": "50.4752",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Suceava",
+    "rank": "1",
+    "id": "9b459405-8c12-478b-b1af-343941634280",
+    "punctaj": "50.3337",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Prahova",
+    "rank": "1",
+    "id": "9b5fa391-b292-413a-a774-b7a1d1466de4",
+    "punctaj": "48.9246",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Olt",
+    "rank": "1",
+    "id": "9b6f6893-7996-4588-b0aa-449d462746f9",
+    "punctaj": "48.5734",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Buz\u0103u",
+    "rank": "2",
+    "id": "9b561df3-a878-423a-85a9-aed3dc9141be",
+    "punctaj": "47.5207",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Buz\u0103u",
+    "rank": "3",
+    "id": "9b4bd7db-ecf8-4bb6-895b-025df93b1afe",
+    "punctaj": "46.78",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Bucure\u0219ti",
+    "rank": "3",
+    "id": "b1b58fc0-042b-11ec-96af-a70293ff71e4",
+    "punctaj": "44.3477",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Ialomi\u021ba",
+    "rank": "1",
+    "id": "9b454cb6-8542-438d-92bb-70f3f81859fc",
+    "punctaj": "44.2541",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Buz\u0103u",
+    "rank": "4",
+    "id": "9b4bc336-58f0-422a-9a22-9b6f4694d2cb",
+    "punctaj": "43.4991",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Bac\u0103u",
+    "rank": "1",
+    "id": "9b55f2fd-37ca-40d8-b102-6bd9622baa04",
+    "punctaj": "41.4885",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Suceava",
+    "rank": "2",
+    "id": "99022c53-2223-4786-8d3d-97270337885c",
+    "punctaj": "41.4885",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Arge\u0219",
+    "rank": "3",
+    "id": "9b540611-6607-475c-80e7-44d959536405",
+    "punctaj": "40.5361",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Buz\u0103u",
+    "rank": "5",
+    "id": "9b4bdd04-b79b-4942-b226-0abb8a85bfa8",
+    "punctaj": "40.4235",
+    "absent": false
+  },
+  {
+    "clasa": "X",
+    "judet": "Bucure\u0219ti",
+    "rank": "1",
+    "id": "5532fae0-04e8-11ed-8ba9-fb85fcf3e2a6",
+    "punctaj": "100",
+    "absent": false
+  }
+]
