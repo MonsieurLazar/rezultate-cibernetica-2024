@@ -1,3 +1,5 @@
+Acest proiect a fost realizat de Lazar. Puteți vizita portofoliul său la [lazar.lol](https://lazar.lol/).
+
 # run final.py for processing
 
 # Calificati la nationala

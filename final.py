@@ -30,6 +30,8 @@ for i in range(number_of_pages):
     if judetIndex != -1:
         judetName = text[judetIndex+8:text.find("\n", judetIndex)]
         judetName = judetName.replace(" ", "")
+        judetName = judetName.replace("  ", "")
+
         if isMunicipiu:
             judetName = text[judetIndex+11:text.find("\n", judetIndex)]
         if judetName != "":
@@ -68,6 +70,49 @@ def getText(reader, pageNumber):
     return workingText
 
 
+def foundElev(judet, cls, currentString):
+    currentElev = {
+        "clasa": cls,
+        "judet": judet,
+        "rank": "",
+        "id": "",
+        "punctaj": "",
+        "absent": False
+    }
+    if (cls == "Unknown"):
+        return
+    print("Clasa " + str(cls))
+
+    isAbsent = currentString.find("absent") != -1
+    currentElev["absent"] = isAbsent
+    if (isAbsent):
+        print("Elev absent")
+        return
+    separatedString = currentString.split(" ")
+    rank = separatedString[0]
+    print(separatedString)
+    separatedString = list(filter(lambda a: a != '', separatedString))
+    separatedString = list(
+        filter(lambda a: a != '\nX', separatedString))
+    if (len(separatedString) < 8):
+        print(
+            "Elevul " + separatedString[1] + " are " + str(len(separatedString)) + " elemente.")
+        print(separatedString)
+        return
+    if (rank == ""):
+        rank = "Unknown"
+        separatedString.insert(0, rank)
+
+    id = separatedString[1].replace(
+        "\n", "") + separatedString[2].replace("\n", "")
+    punctaj = separatedString[3]
+    currentElev["rank"] = rank
+    currentElev["id"] = id
+    currentElev["punctaj"] = punctaj
+    elevi.append(currentElev)
+    print(f"Rank: {rank}\nID: {id}\nPunctaj: {punctaj}\n")
+
+
 for judet in judete:
     reader = PdfReader(f"./data/{judet}.pdf")
     number_of_pages = len(reader.pages)
@@ -83,42 +128,6 @@ for judet in judete:
         workingLength = len(workingText)
 
         # loop through the text
-
-        def foundElev(judet, cls, currentString):
-            currentElev = {
-                "clasa": cls,
-                "judet": judet,
-                "rank": "",
-                "id": "",
-                "punctaj": "",
-                "absent": False
-            }
-            if (cls == "Unknown"):
-                return
-            print("Clasa " + str(cls))
-            isAbsent = currentString.find("absent") != -1
-            currentElev["absent"] = isAbsent
-            if (isAbsent):
-                print("Elev absent")
-                return
-            separatedString = currentString.split(" ")
-            separatedString = list(filter(lambda a: a != '', separatedString))
-            separatedString = list(
-                filter(lambda a: a != '\nX', separatedString))
-            if (len(separatedString) < 8):
-                print(
-                    "Elevul " + separatedString[1] + " are " + str(len(separatedString)) + " elemente.")
-                print(separatedString)
-                return
-            rank = separatedString[0]
-            id = separatedString[1].replace(
-                "\n", "") + separatedString[2].replace("\n", "")
-            punctaj = separatedString[3]
-            currentElev["rank"] = rank
-            currentElev["id"] = id
-            currentElev["punctaj"] = punctaj
-            elevi.append(currentElev)
-            print(f"Rank: {rank}\nID: {id}\nPunctaj: {punctaj}\n")
 
         currentString = ""
         cls = "Unknown"
@@ -156,6 +165,26 @@ for judet in judete:
                 pass
             i += 1
         foundElev(judet, cls, currentString)
+
+
+# names
+def getName(id):
+    import requests
+    url = "https://api.cyber-edu.co/v1/user/" + id
+    response = requests.get(url)
+    print(response.text)
+    return response.json()["name"]
+
+
+# get the names of the students
+maxElevi = len(elevi)
+currentIndex = 0
+for elev in elevi:
+    currentIndex += 1
+    print("Getting name for " + elev['id'] + "...")
+    elev["nume"] = getName(elev["id"])
+    print(f"Got name for {elev['id']} as {
+          elev['nume']}. {currentIndex}/{maxElevi}")
 
 
 # write the elevi to a file
