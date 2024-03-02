@@ -169,6 +169,14 @@ for judet in judete:
 # sort elevi by punctaj
 elevi = sorted(elevi, key=lambda elev: elev["punctaj"], reverse=True)
 # names
+# loop thorugh elevi and fix unicode caracters in judet like  'ă', 'â', 'ș', 'ț'
+for elev in elevi:
+    judet = elev["judet"]
+    judet = judet.replace("ă", "a")
+    judet = judet.replace("â", "a")
+    judet = judet.replace("ș", "s")
+    judet = judet.replace("ț", "t")
+    elev["judet"] = judet
 
 
 def getName(id):
@@ -231,8 +239,8 @@ for judet in judete:
     }
     totiElevii = []
     for elev in elevi:
-        totiElevii.append(elev)
         if (elev["judet"] == judet):
+            totiElevii.append(elev)
             if (elev["clasa"] in claseJud):
                 claseJud[elev["clasa"]].append(elev)
             else:
