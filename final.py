@@ -3,6 +3,13 @@ import os
 from PyPDF2 import PdfReader, PdfWriter
 
 
+# create the data folder
+if not os.path.exists("./data"):
+    os.makedirs("./data")
+# create output folder
+if not os.path.exists("./output"):
+    os.makedirs("./output")
+
 reader = PdfReader("rezultate.pdf")
 number_of_pages = len(reader.pages)
 
@@ -182,3 +189,30 @@ for clasa in clase:
           number_of_elevi} / {len(clase[clasa])} students.")
     with open(f"./output/{clasa}_40.json", "w") as f:
         json.dump(clasaData, f)
+
+for judet in judete:
+    claseJud = {
+        "IX": [],
+        "X": [],
+        "XI": [],
+        "XII": []
+    }
+    for elev in elevi:
+        if (elev["judet"] == judet):
+            if (elev["clasa"] in claseJud):
+                claseJud[elev["clasa"]].append(elev)
+            else:
+                print("Elevul " + elev["id"] + " nu are clasa.")
+    for clasa in claseJud:
+        with open(f"./data/{judet}_{clasa}.json", "w") as f:
+            json.dump(claseJud[clasa], f)
+        clasaData = claseJud[clasa]
+        clasaData = list(filter(lambda elev: float(
+            elev["punctaj"]) >= 40.0, clasaData))
+        clasaData = sorted(
+            clasaData, key=lambda elev: elev["punctaj"], reverse=True)
+        number_of_elevi = len(clasaData)
+        print(f"Clasa {clasa} from {judet} has {
+              number_of_elevi} / {len(claseJud[clasa])} students.")
+        with open(f"./data/{judet}_{clasa}_40.json", "w") as f:
+            json.dump(clasaData, f)
