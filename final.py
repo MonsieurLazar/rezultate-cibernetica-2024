@@ -230,6 +230,15 @@ for clasa in clase:
     with open(f"./output/{clasa}_40.json", "w") as f:
         json.dump(clasaData, f)
 
+
+def getJudetName(judet):
+    judet = judet.replace("ă", "a")
+    judet = judet.replace("â", "a")
+    judet = judet.replace("ș", "s")
+    judet = judet.replace("ț", "t")
+    return judet
+
+
 for judet in judete:
     claseJud = {
         "IX": [],
@@ -239,7 +248,7 @@ for judet in judete:
     }
     totiElevii = []
     for elev in elevi:
-        if (elev["judet"] == judet):
+        if (getJudetName(elev["judet"]) == getJudetName(judet)):
             totiElevii.append(elev)
             if (elev["clasa"] in claseJud):
                 claseJud[elev["clasa"]].append(elev)
